@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A1ACFB421EC462C006FE1E0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFB321EC462B006FE1E0 /* UIColor+Extension.swift */; };
+		3A1ACFB621EC46CB006FE1E0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFB521EC46CB006FE1E0 /* Notification+Extension.swift */; };
+		3A1ACFC121EC6BD3006FE1E0 /* PhotoDisplayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFBB21EC6BD3006FE1E0 /* PhotoDisplayHeader.swift */; };
+		3A1ACFC221EC6BD3006FE1E0 /* PhotoDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFBC21EC6BD3006FE1E0 /* PhotoDisplayCell.swift */; };
+		3A1ACFC321EC6BD3006FE1E0 /* CustomAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFBE21EC6BD3006FE1E0 /* CustomAlbumViewController.swift */; };
+		3A1ACFC421EC6BD3006FE1E0 /* SystemAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFC021EC6BD3006FE1E0 /* SystemAlbumViewController.swift */; };
+		3A1ACFC621ECB6FC006FE1E0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFC521ECB6FC006FE1E0 /* Date+Extension.swift */; };
+		3A1ACFC821ECB8D0006FE1E0 /* BatchSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFC721ECB8D0006FE1E0 /* BatchSelectViewController.swift */; };
+		3A49E8C221DCC62E00DBDA6A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49E8C121DCC62E00DBDA6A /* Photo.swift */; };
+		3AB4F47821D085150039938B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F47721D085150039938B /* AppDelegate.swift */; };
+		3AB4F47D21D085150039938B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB4F47B21D085150039938B /* Main.storyboard */; };
+		3AB4F47F21D085170039938B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB4F47E21D085170039938B /* Assets.xcassets */; };
+		3AB4F48221D085170039938B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB4F48021D085170039938B /* LaunchScreen.storyboard */; };
+		3AB4F48D21D085170039938B /* SecretAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F48C21D085170039938B /* SecretAlbumTests.swift */; };
+		3AB4F49821D085170039938B /* SecretAlbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F49721D085170039938B /* SecretAlbumUITests.swift */; };
+		3AB4F4AE21D094130039938B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F4AD21D094130039938B /* Utilities.swift */; };
+		3AB4F4B121D094540039938B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F4B021D094540039938B /* UIViewController+Extension.swift */; };
+		653ABD225A080330E8A1975C /* Pods_SecretAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AB4F48921D085170039938B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB4F46C21D085150039938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB4F47321D085150039938B;
+			remoteInfo = SecretAlbum;
+		};
+		3AB4F49421D085170039938B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB4F46C21D085150039938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB4F47321D085150039938B;
+			remoteInfo = SecretAlbum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDDE848D4A306109D629B85 /* Pods-SecretAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		3A1ACFB321EC462B006FE1E0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		3A1ACFB521EC46CB006FE1E0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		3A1ACFBB21EC6BD3006FE1E0 /* PhotoDisplayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDisplayHeader.swift; sourceTree = "<group>"; };
+		3A1ACFBC21EC6BD3006FE1E0 /* PhotoDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDisplayCell.swift; sourceTree = "<group>"; };
+		3A1ACFBE21EC6BD3006FE1E0 /* CustomAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbumViewController.swift; sourceTree = "<group>"; };
+		3A1ACFC021EC6BD3006FE1E0 /* SystemAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemAlbumViewController.swift; sourceTree = "<group>"; };
+		3A1ACFC521ECB6FC006FE1E0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		3A1ACFC721ECB8D0006FE1E0 /* BatchSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSelectViewController.swift; sourceTree = "<group>"; };
+		3A49E8BA21DCBAAB00DBDA6A /* SecretAlbum-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecretAlbum-PrefixHeader.pch"; sourceTree = "<group>"; };
+		3A49E8C121DCC62E00DBDA6A /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3AB4F47421D085150039938B /* SecretAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB4F47721D085150039938B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AB4F47C21D085150039938B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AB4F47E21D085170039938B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AB4F48121D085170039938B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AB4F48321D085170039938B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB4F48821D085170039938B /* SecretAlbumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretAlbumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB4F48C21D085170039938B /* SecretAlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAlbumTests.swift; sourceTree = "<group>"; };
+		3AB4F48E21D085170039938B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB4F49321D085170039938B /* SecretAlbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretAlbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB4F49721D085170039938B /* SecretAlbumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAlbumUITests.swift; sourceTree = "<group>"; };
+		3AB4F49921D085170039938B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB4F4AD21D094130039938B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3AB4F4B021D094540039938B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D27961371973CE7DFD274092 /* Pods-SecretAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AB4F47121D085150039938B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653ABD225A080330E8A1975C /* Pods_SecretAlbum.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB4F48521D085170039938B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB4F49021D085170039938B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A1ACFB921EC6BD3006FE1E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A1ACFBA21EC6BD3006FE1E0 /* Widget */,
+				3A1ACFBD21EC6BD3006FE1E0 /* CustomAlbum */,
+				3A1ACFBF21EC6BD3006FE1E0 /* SystemAlbum */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A1ACFBA21EC6BD3006FE1E0 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				3A1ACFBB21EC6BD3006FE1E0 /* PhotoDisplayHeader.swift */,
+				3A1ACFBC21EC6BD3006FE1E0 /* PhotoDisplayCell.swift */,
+				3A1ACFC721ECB8D0006FE1E0 /* BatchSelectViewController.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		3A1ACFBD21EC6BD3006FE1E0 /* CustomAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				3A1ACFBE21EC6BD3006FE1E0 /* CustomAlbumViewController.swift */,
+			);
+			path = CustomAlbum;
+			sourceTree = "<group>";
+		};
+		3A1ACFBF21EC6BD3006FE1E0 /* SystemAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				3A1ACFC021EC6BD3006FE1E0 /* SystemAlbumViewController.swift */,
+			);
+			path = SystemAlbum;
+			sourceTree = "<group>";
+		};
+		3A49E8C021DCC60400DBDA6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A49E8C121DCC62E00DBDA6A /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AB4F46B21D085150039938B = {
+			isa = PBXGroup;
+			children = (
+				3AB4F47621D085150039938B /* SecretAlbum */,
+				3AB4F48B21D085170039938B /* SecretAlbumTests */,
+				3AB4F49621D085170039938B /* SecretAlbumUITests */,
+				3AB4F47521D085150039938B /* Products */,
+				886DB3B1E96E3CD1152C3A37 /* Pods */,
+				AC5004D5E0275EB4A26F9824 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3AB4F47521D085150039938B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4F47421D085150039938B /* SecretAlbum.app */,
+				3AB4F48821D085170039938B /* SecretAlbumTests.xctest */,
+				3AB4F49321D085170039938B /* SecretAlbumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AB4F47621D085150039938B /* SecretAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4F47721D085150039938B /* AppDelegate.swift */,
+				3A1ACFB921EC6BD3006FE1E0 /* View */,
+				3A49E8C021DCC60400DBDA6A /* Model */,
+				3AB4F4AF21D094310039938B /* Extension */,
+				3AB4F4AC21D093FB0039938B /* Utilities */,
+				3AB4F47B21D085150039938B /* Main.storyboard */,
+				3AB4F47E21D085170039938B /* Assets.xcassets */,
+				3AB4F48021D085170039938B /* LaunchScreen.storyboard */,
+				3AB4F48321D085170039938B /* Info.plist */,
+				3A49E8BA21DCBAAB00DBDA6A /* SecretAlbum-PrefixHeader.pch */,
+			);
+			path = SecretAlbum;
+			sourceTree = "<group>";
+		};
+		3AB4F48B21D085170039938B /* SecretAlbumTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4F48C21D085170039938B /* SecretAlbumTests.swift */,
+				3AB4F48E21D085170039938B /* Info.plist */,
+			);
+			path = SecretAlbumTests;
+			sourceTree = "<group>";
+		};
+		3AB4F49621D085170039938B /* SecretAlbumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4F49721D085170039938B /* SecretAlbumUITests.swift */,
+				3AB4F49921D085170039938B /* Info.plist */,
+			);
+			path = SecretAlbumUITests;
+			sourceTree = "<group>";
+		};
+		3AB4F4AC21D093FB0039938B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4F4AD21D094130039938B /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3AB4F4AF21D094310039938B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4F4B021D094540039938B /* UIViewController+Extension.swift */,
+				3A1ACFB321EC462B006FE1E0 /* UIColor+Extension.swift */,
+				3A1ACFB521EC46CB006FE1E0 /* Notification+Extension.swift */,
+				3A1ACFC521ECB6FC006FE1E0 /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		886DB3B1E96E3CD1152C3A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D27961371973CE7DFD274092 /* Pods-SecretAlbum.debug.xcconfig */,
+				2CDDE848D4A306109D629B85 /* Pods-SecretAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC5004D5E0275EB4A26F9824 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AB4F47321D085150039938B /* SecretAlbum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB4F49C21D085170039938B /* Build configuration list for PBXNativeTarget "SecretAlbum" */;
+			buildPhases = (
+				9C4B856F6083F91658CD83BE /* [CP] Check Pods Manifest.lock */,
+				3AB4F47021D085150039938B /* Sources */,
+				3AB4F47121D085150039938B /* Frameworks */,
+				3AB4F47221D085150039938B /* Resources */,
+				13429F3320EF6311A9140EFA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecretAlbum;
+			productName = SecretAlbum;
+			productReference = 3AB4F47421D085150039938B /* SecretAlbum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AB4F48721D085170039938B /* SecretAlbumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB4F49F21D085170039938B /* Build configuration list for PBXNativeTarget "SecretAlbumTests" */;
+			buildPhases = (
+				3AB4F48421D085170039938B /* Sources */,
+				3AB4F48521D085170039938B /* Frameworks */,
+				3AB4F48621D085170039938B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AB4F48A21D085170039938B /* PBXTargetDependency */,
+			);
+			name = SecretAlbumTests;
+			productName = SecretAlbumTests;
+			productReference = 3AB4F48821D085170039938B /* SecretAlbumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AB4F49221D085170039938B /* SecretAlbumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB4F4A221D085170039938B /* Build configuration list for PBXNativeTarget "SecretAlbumUITests" */;
+			buildPhases = (
+				3AB4F48F21D085170039938B /* Sources */,
+				3AB4F49021D085170039938B /* Frameworks */,
+				3AB4F49121D085170039938B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AB4F49521D085170039938B /* PBXTargetDependency */,
+			);
+			name = SecretAlbumUITests;
+			productName = SecretAlbumUITests;
+			productReference = 3AB4F49321D085170039938B /* SecretAlbumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AB4F46C21D085150039938B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Jash;
+				TargetAttributes = {
+					3AB4F47321D085150039938B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3AB4F48721D085170039938B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3AB4F47321D085150039938B;
+					};
+					3AB4F49221D085170039938B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3AB4F47321D085150039938B;
+					};
+				};
+			};
+			buildConfigurationList = 3AB4F46F21D085150039938B /* Build configuration list for PBXProject "SecretAlbum" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AB4F46B21D085150039938B;
+			productRefGroup = 3AB4F47521D085150039938B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AB4F47321D085150039938B /* SecretAlbum */,
+				3AB4F48721D085170039938B /* SecretAlbumTests */,
+				3AB4F49221D085170039938B /* SecretAlbumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AB4F47221D085150039938B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB4F48221D085170039938B /* LaunchScreen.storyboard in Resources */,
+				3AB4F47F21D085170039938B /* Assets.xcassets in Resources */,
+				3AB4F47D21D085150039938B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB4F48621D085170039938B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB4F49121D085170039938B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13429F3320EF6311A9140EFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C4B856F6083F91658CD83BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SecretAlbum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AB4F47021D085150039938B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A49E8C221DCC62E00DBDA6A /* Photo.swift in Sources */,
+				3A1ACFC621ECB6FC006FE1E0 /* Date+Extension.swift in Sources */,
+				3A1ACFC221EC6BD3006FE1E0 /* PhotoDisplayCell.swift in Sources */,
+				3A1ACFC821ECB8D0006FE1E0 /* BatchSelectViewController.swift in Sources */,
+				3AB4F47821D085150039938B /* AppDelegate.swift in Sources */,
+				3A1ACFC421EC6BD3006FE1E0 /* SystemAlbumViewController.swift in Sources */,
+				3A1ACFB421EC462C006FE1E0 /* UIColor+Extension.swift in Sources */,
+				3AB4F4AE21D094130039938B /* Utilities.swift in Sources */,
+				3A1ACFC121EC6BD3006FE1E0 /* PhotoDisplayHeader.swift in Sources */,
+				3AB4F4B121D094540039938B /* UIViewController+Extension.swift in Sources */,
+				3A1ACFB621EC46CB006FE1E0 /* Notification+Extension.swift in Sources */,
+				3A1ACFC321EC6BD3006FE1E0 /* CustomAlbumViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB4F48421D085170039938B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB4F48D21D085170039938B /* SecretAlbumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB4F48F21D085170039938B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB4F49821D085170039938B /* SecretAlbumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AB4F48A21D085170039938B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB4F47321D085150039938B /* SecretAlbum */;
+			targetProxy = 3AB4F48921D085170039938B /* PBXContainerItemProxy */;
+		};
+		3AB4F49521D085170039938B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB4F47321D085150039938B /* SecretAlbum */;
+			targetProxy = 3AB4F49421D085170039938B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AB4F47B21D085150039938B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AB4F47C21D085150039938B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AB4F48021D085170039938B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AB4F48121D085170039938B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AB4F49A21D085170039938B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AB4F49B21D085170039938B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AB4F49D21D085170039938B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D27961371973CE7DFD274092 /* Pods-SecretAlbum.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8X43M95KKS;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SecretAlbum/SecretAlbum-Prefix.pch";
+				INFOPLIST_FILE = SecretAlbum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jash.SecretAlbum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AB4F49E21D085170039938B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CDDE848D4A306109D629B85 /* Pods-SecretAlbum.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8X43M95KKS;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SecretAlbum/SecretAlbum-Prefix.pch";
+				INFOPLIST_FILE = SecretAlbum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jash.SecretAlbum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3AB4F4A021D085170039938B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SecretAlbumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jash.SecretAlbumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecretAlbum.app/SecretAlbum";
+			};
+			name = Debug;
+		};
+		3AB4F4A121D085170039938B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SecretAlbumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jash.SecretAlbumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecretAlbum.app/SecretAlbum";
+			};
+			name = Release;
+		};
+		3AB4F4A321D085170039938B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SecretAlbumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jash.SecretAlbumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SecretAlbum;
+			};
+			name = Debug;
+		};
+		3AB4F4A421D085170039938B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SecretAlbumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jash.SecretAlbumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SecretAlbum;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AB4F46F21D085150039938B /* Build configuration list for PBXProject "SecretAlbum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB4F49A21D085170039938B /* Debug */,
+				3AB4F49B21D085170039938B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB4F49C21D085170039938B /* Build configuration list for PBXNativeTarget "SecretAlbum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB4F49D21D085170039938B /* Debug */,
+				3AB4F49E21D085170039938B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB4F49F21D085170039938B /* Build configuration list for PBXNativeTarget "SecretAlbumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB4F4A021D085170039938B /* Debug */,
+				3AB4F4A121D085170039938B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB4F4A221D085170039938B /* Build configuration list for PBXNativeTarget "SecretAlbumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB4F4A321D085170039938B /* Debug */,
+				3AB4F4A421D085170039938B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AB4F46C21D085150039938B /* Project object */;
+}
