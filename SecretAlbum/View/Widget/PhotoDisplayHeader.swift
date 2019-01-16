@@ -58,6 +58,7 @@ class PhotoDisplayHeader: UICollectionReusableView {
     }
     
     @objc private func bgButtonTapped(_ sender: UIButton) {
+        headerSelectHandler?(!sender.isSelected)
         selectButton.isSelected = !sender.isSelected
         bgButton.isSelected = !sender.isSelected
     }

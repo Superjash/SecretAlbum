@@ -12,7 +12,7 @@ import Photos
 class PhotoDisplayCell: UICollectionViewCell {
     
     var previewHandler: (() -> Void)? // 预览
-    var selectionHandler: (() -> Void)? // 选择
+    var selectHandler: (() -> Void)? // 选择
     
     private var imageView: UIImageView!
     private var previewButton: UIButton!
@@ -57,7 +57,7 @@ class PhotoDisplayCell: UICollectionViewCell {
     }
     
     @objc private func selectionButtonTapped(_ sender: UIButton) {
-        self.selectionHandler?()
+        self.selectHandler?()
     }
     
     override func prepareForReuse() {
@@ -67,7 +67,18 @@ class PhotoDisplayCell: UICollectionViewCell {
         }
     }
     
-    func update(photo: Photo) {
+    func update(photo: Photo, enabled: Bool) {
+        selectButton.isHidden = !enabled
+        selectButton.isEnabled = enabled
+        selectButton.isSelected = photo.selected
+        if photo.selected {
+            UIView.animate(withDuration: 0.15) {
+                self.imageView.transform = CGAffineTransform(scaleX: 0.82, y: 0.82)
+            }
+        } else {
+            self.imageView.transform = .identity
+        }
+        
         assetIdentifier = photo.asset.localIdentifier
         let options = PHImageRequestOptions()
         let scale = UIScreen.main.scale

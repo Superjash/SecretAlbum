@@ -1,9 +1,9 @@
 //
 //  UIColor+Extension.swift
-//  PhotoX
+//  SecretAlbum
 //
-//  Created by 江绍珩 on 2018/9/28.
-//  Copyright © 2018年 Meteor. All rights reserved.
+//  Created by Jash on 2019/1/14.
+//  Copyright © 2019 Jash. All rights reserved.
 //
 
 import UIKit

@@ -41,7 +41,7 @@ class Utilities {
     }
     
     class func formatDate(date: Date) -> String {
-        return String(date.month) + "月" + String(date.day) + "日"
+        return String(date.month) + "月" + String(date.day) + "日" + "  " + String(date.year)
     }
     
     class func arrangePhotos(photos: [Photo]) -> [PhotoGroup] {

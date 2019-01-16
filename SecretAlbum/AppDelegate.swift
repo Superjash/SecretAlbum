@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    internal var tabBarViewController: UITabBarController!
+    internal var tabBarController: UITabBarController!
     
     internal var systemAlbumViewController: SystemAlbumViewController!
     internal var customAlbumViewController: CustomAlbumViewController!
@@ -50,21 +50,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func initTabBar() {
+        tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = UIColor(red: 250.0/255, green: 250.0/255, blue: 250.0/255, alpha: 1.0)
+        
+        navigationController = UINavigationController()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         systemAlbumViewController = SystemAlbumViewController()
         systemAlbumViewController.tabBarItem = UITabBarItem(title: "system", image: nil, tag: 0)
         
         customAlbumViewController = CustomAlbumViewController()
         customAlbumViewController.tabBarItem = UITabBarItem(title: "custom", image: nil, tag: 0)
         
-        tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = [systemAlbumViewController, customAlbumViewController]
-        tabBarViewController.tabBar.backgroundColor = UIColor(red: 250.0/255, green: 250.0/255, blue: 250.0/255, alpha: 1.0)
+        navigationController.setViewControllers([tabBarController], animated: false)
+        tabBarController.viewControllers = [systemAlbumViewController, customAlbumViewController]
         
-        navigationController = UINavigationController()
-        navigationController.setViewControllers([tabBarViewController], animated: false)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        
-        tabBarViewController.selectedIndex = 1
+        tabBarController.selectedIndex = 0
     }
 }

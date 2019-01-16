@@ -12,11 +12,36 @@ import SnapKit
 
 class SystemAlbumViewController: BatchSelectViewController {
     
-    var dataSource: [PhotoGroup] = []
-    var collectionView: UICollectionView!
+    var endSelectItem: UIBarButtonItem!
+    var beginSelectItem: UIBarButtonItem!
+    var moreActionItem: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        defaultTitle = "相册"
+        view.backgroundColor = .white
+        
+        endSelectItem = UIBarButtonItem(image: UIImage(named: "icon_close_black"), style: .done, target: self, action: #selector(endSelectButtonTapped(_:)))
+        endSelectItem.tintColor = .black
+        endSelectItem.isEnabled = false
+        tabBarController?.navigationItem.leftBarButtonItem = endSelectItem
+        
+        beginSelectItem = UIBarButtonItem(image: UIImage(named: "icon_select_black"), style: .done, target: self, action: #selector(beginSelectButtonTapped(_:)))
+        beginSelectItem.tintColor = .black
+        beginSelectItem.isEnabled = true
+        tabBarController?.navigationItem.rightBarButtonItem = beginSelectItem
+        
+        moreActionItem icon_3dots_black
+        
+        beginEditingHandler = { [weak self] in
+            self?.endSelectItem.isEnabled = true
+            self?.beginSelectItem.isEnabled = false
+        }
+        endEditingHandler = { [weak self] in
+            self?.endSelectItem.isEnabled = false
+            self?.beginSelectItem.isEnabled = true
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.headerReferenceSize = CGSize(width: view.bounds.width, height: 50)
@@ -29,18 +54,30 @@ class SystemAlbumViewController: BatchSelectViewController {
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(PhotoDisplayHeader.self, forCellWithReuseIdentifier: NSStringFromClass(PhotoDisplayHeader.self))
+        collectionView.register(PhotoDisplayHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NSStringFromClass(PhotoDisplayHeader.self))
         collectionView.register(PhotoDisplayCell.self, forCellWithReuseIdentifier: NSStringFromClass(PhotoDisplayCell.self))
         view.addSubview(collectionView)
+        addGesture()
         
-        let longPress = UILongPressGestureRecognizer.init(target: self, action: #selector(handleCellLongPress(_:)))
-        collectionView.addGestureRecognizer(longPress)
+        refreshTitle()
         
         checkAuthorization()
     }
     
-    @objc private func handleCellLongPress(_ gesture: UILongPressGestureRecognizer) {
-        
+    @objc private func beginSelectButtonTapped(_ sender: UIBarButtonItem) {
+        beginSelect()
+    }
+    
+    @objc private func endSelectButtonTapped(_ sender: UIBarButtonItem) {
+        endSelect()
+    }
+    
+    override func refreshTitle() {
+        if isEditing {
+            tabBarController?.title = selectedCount > 0 ? String(selectedCount) + "张照片": "选择照片"
+        } else {
+            tabBarController?.title = defaultTitle
+        }
     }
     
     private func checkAuthorization() {
@@ -99,7 +136,6 @@ extension SystemAlbumViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(PhotoDisplayHeader.self), for: indexPath) as! PhotoDisplayHeader
-            header.update(group: <#T##PhotoGroup#>, enabled: <#T##Bool#>)
             updateHeader(header: header, indexpath: indexPath)
             return header
         }
@@ -108,7 +144,7 @@ extension SystemAlbumViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(PhotoDisplayCell.self), for: indexPath) as! PhotoDisplayCell
-        cell.update(photo: dataSource[indexPath.section].photos[indexPath.row])
+        updateCell(cell: cell, indexpath: indexPath)
         return cell
     }
 }
