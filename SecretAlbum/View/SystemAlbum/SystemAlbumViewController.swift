@@ -19,20 +19,23 @@ class SystemAlbumViewController: BatchSelectViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        defaultTitle = "相册"
-        view.backgroundColor = .white
-        
-        endSelectItem = UIBarButtonItem(image: UIImage(named: "icon_close_black"), style: .done, target: self, action: #selector(endSelectButtonTapped(_:)))
-        endSelectItem.tintColor = .black
-        endSelectItem.isEnabled = false
-        tabBarController?.navigationItem.leftBarButtonItem = endSelectItem
-        
-        beginSelectItem = UIBarButtonItem(image: UIImage(named: "icon_select_black"), style: .done, target: self, action: #selector(beginSelectButtonTapped(_:)))
-        beginSelectItem.tintColor = .black
-        beginSelectItem.isEnabled = true
-        tabBarController?.navigationItem.rightBarButtonItem = beginSelectItem
-        
-        moreActionItem icon_3dots_black
+//        defaultTitle = "相册"
+//        view.backgroundColor = .white
+//
+//        endSelectItem = UIBarButtonItem(image: UIImage(named: "icon_close_black"), style: .done, target: self, action: #selector(endSelectButtonTapped(_:)))
+//        endSelectItem.tintColor = .black
+//        endSelectItem.isEnabled = false
+//
+//        beginSelectItem = UIBarButtonItem(image: UIImage(named: "icon_select_black"), style: .done, target: self, action: #selector(beginSelectButtonTapped(_:)))
+//        beginSelectItem.tintColor = .black
+//        beginSelectItem.isEnabled = true
+//
+//        moreActionItem = UIBarButtonItem(image: UIImage(named: "icon_3dots_black"), style: .done, target: self, action: #selector(beginSelectButtonTapped(_:)))
+//        moreActionItem.tintColor = .black
+//        moreActionItem.isEnabled = true
+//
+//        tabBarController?.navigationItem.leftBarButtonItem = endSelectItem
+//        tabBarController?.navigationItem.rightBarButtonItem = beginSelectItem
         
         beginEditingHandler = { [weak self] in
             self?.endSelectItem.isEnabled = true
@@ -64,12 +67,25 @@ class SystemAlbumViewController: BatchSelectViewController {
         checkAuthorization()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshTitle()
+    }
+    
     @objc private func beginSelectButtonTapped(_ sender: UIBarButtonItem) {
         beginSelect()
     }
     
     @objc private func endSelectButtonTapped(_ sender: UIBarButtonItem) {
         endSelect()
+    }
+    
+    @objc private func moreActionButtonTapped(_ sender: UIBarButtonItem) {
+        let actionSheet = SAActionSheet()
+        actionSheet.addAction(SAAction(title: "", style: .default, handler: { (_) in
+            
+        }))
+        actionSheet.show()
     }
     
     override func refreshTitle() {

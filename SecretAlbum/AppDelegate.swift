@@ -66,6 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.setViewControllers([tabBarController], animated: false)
         tabBarController.viewControllers = [systemAlbumViewController, customAlbumViewController]
         
-        tabBarController.selectedIndex = 0
+        tabBarController.selectedIndex = 1
     }
 }

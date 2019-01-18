@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A18520121F0698100BC5014 /* SAActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18520021F0698100BC5014 /* SAActionSheet.swift */; };
+		3A18520321F06A1200BC5014 /* UserInterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18520221F06A1200BC5014 /* UserInterfaceConstants.swift */; };
+		3A18520521F06C3C00BC5014 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18520421F06C3C00BC5014 /* UIView+Extension.swift */; };
 		3A1ACFB421EC462C006FE1E0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFB321EC462B006FE1E0 /* UIColor+Extension.swift */; };
 		3A1ACFB621EC46CB006FE1E0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFB521EC46CB006FE1E0 /* Notification+Extension.swift */; };
 		3A1ACFC121EC6BD3006FE1E0 /* PhotoDisplayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1ACFBB21EC6BD3006FE1E0 /* PhotoDisplayHeader.swift */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDDE848D4A306109D629B85 /* Pods-SecretAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		3A18520021F0698100BC5014 /* SAActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAActionSheet.swift; sourceTree = "<group>"; };
+		3A18520221F06A1200BC5014 /* UserInterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterfaceConstants.swift; sourceTree = "<group>"; };
+		3A18520421F06C3C00BC5014 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		3A1ACFB321EC462B006FE1E0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3A1ACFB521EC46CB006FE1E0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		3A1ACFBB21EC6BD3006FE1E0 /* PhotoDisplayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDisplayHeader.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 				3A1ACFBB21EC6BD3006FE1E0 /* PhotoDisplayHeader.swift */,
 				3A1ACFBC21EC6BD3006FE1E0 /* PhotoDisplayCell.swift */,
 				3A1ACFC721ECB8D0006FE1E0 /* BatchSelectViewController.swift */,
+				3A18520021F0698100BC5014 /* SAActionSheet.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB4F4AD21D094130039938B /* Utilities.swift */,
+				3A18520221F06A1200BC5014 /* UserInterfaceConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 				3A1ACFB321EC462B006FE1E0 /* UIColor+Extension.swift */,
 				3A1ACFB521EC46CB006FE1E0 /* Notification+Extension.swift */,
 				3A1ACFC521ECB6FC006FE1E0 /* Date+Extension.swift */,
+				3A18520421F06C3C00BC5014 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -419,7 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A18520121F0698100BC5014 /* SAActionSheet.swift in Sources */,
 				3A49E8C221DCC62E00DBDA6A /* Photo.swift in Sources */,
+				3A18520321F06A1200BC5014 /* UserInterfaceConstants.swift in Sources */,
+				3A18520521F06C3C00BC5014 /* UIView+Extension.swift in Sources */,
 				3A1ACFC621ECB6FC006FE1E0 /* Date+Extension.swift in Sources */,
 				3A1ACFC221EC6BD3006FE1E0 /* PhotoDisplayCell.swift in Sources */,
 				3A1ACFC821ECB8D0006FE1E0 /* BatchSelectViewController.swift in Sources */,

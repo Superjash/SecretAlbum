@@ -37,7 +37,7 @@ class PhotoDisplayHeader: UICollectionReusableView {
         
         titleLabel = UILabel()
         titleLabel.textAlignment = .left
-        titleLabel.textColor = UIColor.mtGray(1)
+        titleLabel.textColor = UIColor.saGray(1)
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
