@@ -47,3 +47,23 @@ class PhotoGroup {
         }
     }
 }
+
+class File {
+    
+    enum FileType {
+        case folder
+        case photo
+    }
+    
+    var fullName: String
+    var name: String
+    var ext: String
+    var type: FileType
+    
+    init(fullName: String) {
+        self.fullName = fullName
+        self.name = ""
+        self.ext = ""
+        self.type = .folder
+    }
+}

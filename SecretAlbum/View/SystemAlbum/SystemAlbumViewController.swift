@@ -117,14 +117,10 @@ class SystemAlbumViewController: BatchSelectViewController {
     }
     
     private func loadAlbum() {
-        let options = PHFetchOptions()
-        let result = PHAsset.fetchAssets(with: options)
-        var photos: [Photo] = []
-        result.enumerateObjects { (asset, index, _) in
-            photos.append(Photo(asset: asset))
+        PhotoUtility.asyncLoadPhotos { [weak self] (phtots) in
+            self?.dataSource = PhotoUtility.arrangePhotos(photos: phtots)
+            self?.collectionView.reloadData()
         }
-        self.dataSource = Utilities.arrangePhotos(photos: photos)
-        collectionView.reloadData()
     }
     
     private func showPlaceHolder() {

@@ -10,33 +10,27 @@ import UIKit
 
 class CustomAlbumViewController: UIViewController {
     
+    private var dataSource: [File] = []
     private var tableView: UITableView!
-//    private var
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
-        tableView = UITableView(frame: view.bounds, style: .grouped)
+//        tableView = UITableView(frame: view.bounds, style: .grouped)
+//        tableView.dataSource = self
+//        tableView.delegate = self
+//        view.addSubview(tableView)
         
-        let arr = findFiles(path: NSHomeDirectory().appending("/Documents"), filterTypes: [])
         
-        let start = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
-        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y - 130), control: CGPoint(x: view.bounds.width / 2 * 0.5, y: start.y - 140), color: .red, view: view)
-        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y - 80), control: CGPoint(x: view.bounds.width / 2 * 0.6, y: start.y - 100), color: .red, view: view)
-        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y - 30), control: CGPoint(x: view.bounds.width / 2 * 0.5, y: start.y - 50), color: .red, view: view)
-        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y + 80), control: CGPoint(x: view.bounds.width / 2 * 0.8, y: start.y - 20), color: .red, view: view)
-        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y + 160), control: CGPoint(x: view.bounds.width / 2 * 0.9, y: start.y - 10), color: .red, view: view)
-
-        let button = UIButton(type: .system)
-        button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-        button.backgroundColor = .cyan
-        button.frame = CGRect(x: (view.bounds.width - 80) / 2, y: (view.bounds.height - 80) / 2, width: 80, height: 80)
-        button.layer.cornerRadius = 40
-        button.clipsToBounds = true
-//        view.addSubview(button)
+//        let start = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
+//        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y - 130), control: CGPoint(x: view.bounds.width / 2 * 0.5, y: start.y - 140), color: .red, view: view)
+//        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y - 80), control: CGPoint(x: view.bounds.width / 2 * 0.6, y: start.y - 100), color: .red, view: view)
+//        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y - 30), control: CGPoint(x: view.bounds.width / 2 * 0.5, y: start.y - 50), color: .red, view: view)
+//        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y + 80), control: CGPoint(x: view.bounds.width / 2 * 0.8, y: start.y - 20), color: .red, view: view)
+//        drawLineFromPoint(start: start, end: CGPoint(x: 0, y: start.y + 160), control: CGPoint(x: view.bounds.width / 2 * 0.9, y: start.y - 10), color: .red, view: view)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,19 +38,15 @@ class CustomAlbumViewController: UIViewController {
         tabBarController?.title = "Documents"
     }
     
-    private func findFiles(path: String, filterTypes: [String]) -> [String] {
-        do {
-            let files = try FileManager.default.contentsOfDirectory(atPath: path)
-            if filterTypes.count == 0 {
-                return files
-            } else {
-                let filteredfiles = NSArray(array: files).pathsMatchingExtensions(filterTypes)
-                return filteredfiles
-            }
-        } catch {
-            return []
-        }
+    private func loadFiles() {
+//        DispatchQueue.main
+//        let files: [String] = findFiles(path: NSHomeDirectory().appending("/Documents"), filterTypes: [])
+//        for file in files {
+//            dataSource.append(File(fullName: file))
+//        }
     }
+    
+
     
     private func drawLineFromPoint(start: CGPoint, end: CGPoint, control: CGPoint, color: UIColor, view: UIView) {
         //design the path
@@ -77,3 +67,26 @@ class CustomAlbumViewController: UIViewController {
         
     }
 }
+
+//extension CustomAlbumViewController: UITableViewDataSource, UITableViewDelegate {
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 0 // CGFloat.leastNonzeroMagnitude
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return dataSource.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: false)
+//    }
+//}

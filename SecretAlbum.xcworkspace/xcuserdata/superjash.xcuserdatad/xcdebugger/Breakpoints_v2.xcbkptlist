@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SecretAlbum/View/CustomAlbum/CustomAlbumViewController.swift"
-            timestampString = "569505131.86053"
+            filePath = "SecretAlbum/Model/Photo.swift"
+            timestampString = "569762083.78321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "init(fullName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
