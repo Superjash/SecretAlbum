@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     internal var tabBarController: UITabBarController!
     
-    internal var systemAlbumViewController: SystemAlbumViewController!
-    internal var customAlbumViewController: CustomAlbumViewController!
+    internal var wcVC: WeirdCameraViewController!
+    internal var saVC: SecretAlbumViewController!
     
     internal var navigationController: UINavigationController!
     
@@ -57,15 +57,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
-        systemAlbumViewController = SystemAlbumViewController()
-        systemAlbumViewController.tabBarItem = UITabBarItem(title: "system", image: nil, tag: 0)
+        wcVC = WeirdCameraViewController()
+        wcVC.tabBarItem = UITabBarItem(title: "Camera", image: nil, tag: 0)
         
-        customAlbumViewController = CustomAlbumViewController()
-        customAlbumViewController.tabBarItem = UITabBarItem(title: "custom", image: nil, tag: 0)
+        saVC = SecretAlbumViewController()
+        saVC.tabBarItem = UITabBarItem(title: "Album", image: nil, tag: 1)
         
         navigationController.setViewControllers([tabBarController], animated: false)
-        tabBarController.viewControllers = [systemAlbumViewController, customAlbumViewController]
+        tabBarController.viewControllers = [wcVC, saVC]
         
-        tabBarController.selectedIndex = 1
+        tabBarController.selectedIndex = 0
     }
 }

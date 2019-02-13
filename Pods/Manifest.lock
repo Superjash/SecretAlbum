@@ -1,20 +1,24 @@
 PODS:
   - DateToolsSwift (4.0.0)
+  - GPUImage (0.1.7)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - DateToolsSwift
+  - GPUImage
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DateToolsSwift
+    - GPUImage
     - SnapKit
 
 SPEC CHECKSUMS:
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 4fea073cc979ca0e1587584eeb2de3ee0af14e31
+PODFILE CHECKSUM: 4a18be4a567c8756ce09f374e66d7c793e621b45
 
 COCOAPODS: 1.5.3

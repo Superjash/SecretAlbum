@@ -20,8 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>相机权限</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要相册权限来备份照片</string>
+	<string>相册权限</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

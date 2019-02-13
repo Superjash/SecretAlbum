@@ -5,6 +5,7 @@ use_frameworks!
 target 'SecretAlbum' do
     pod 'SnapKit', '~> 4.0.0'
     pod 'DateToolsSwift'
+    pod 'GPUImage'
 end
 
 post_install do |installer|
