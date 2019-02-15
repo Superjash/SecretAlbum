@@ -9,5 +9,7 @@
 #import <GPUImage/GPUImage.h>
 
 @interface GPUImage3DFilter: GPUImageFilter
+    
+@property (assign, nonatomic) CGPoint offset;
 
 @end

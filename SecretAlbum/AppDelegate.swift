@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     internal var wcVC: WeirdCameraViewController!
     internal var saVC: SecretAlbumViewController!
+    internal var ecVC: EatCrabViewController!
     
     internal var navigationController: UINavigationController!
     
@@ -63,9 +64,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         saVC = SecretAlbumViewController()
         saVC.tabBarItem = UITabBarItem(title: "Album", image: nil, tag: 1)
         
-        navigationController.setViewControllers([tabBarController], animated: false)
-        tabBarController.viewControllers = [wcVC, saVC]
+        ecVC = EatCrabViewController()
+        ecVC.tabBarItem = UITabBarItem(title: "Eat Crab", image: nil, tag: 2)
         
-        tabBarController.selectedIndex = 0
+        navigationController.setViewControllers([tabBarController], animated: false)
+        tabBarController.viewControllers = [wcVC, saVC, ecVC]
+        
+        tabBarController.selectedIndex = 2
     }
 }

@@ -6,6 +6,8 @@ target 'SecretAlbum' do
     pod 'SnapKit', '~> 4.0.0'
     pod 'DateToolsSwift'
     pod 'GPUImage'
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
 end
 
 post_install do |installer|

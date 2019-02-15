@@ -14,6 +14,7 @@ class SecretAlbumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.dataSource = self

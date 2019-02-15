@@ -16,6 +16,7 @@ class WeirdCameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.dataSource = self
@@ -27,9 +28,9 @@ class WeirdCameraViewController: UIViewController {
             PHPhotoLibrary.requestAuthorization { [weak self] (status) in
                 DispatchQueue.main.async {
                     if granted {
-                        let gcVC = GPUCameraViewController()
-                        gcVC.setupCamera(type: .douYin)
-                        self?.navigationController?.pushViewController(gcVC, animated: true)
+//                        let gcVC = GPUCameraViewController()
+//                        gcVC.setupCamera(type: .douyin)
+//                        self?.navigationController?.pushViewController(gcVC, animated: true)
                     }
                 }
             }
@@ -49,16 +50,18 @@ extension WeirdCameraViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(UITableViewCell.self), for: indexPath)
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = "Red & Blue"
+            cell.textLabel?.text = "thermal"
         case 1:
-            cell.textLabel?.text = "Dou Yin"
+            cell.textLabel?.text = "old photo"
+        case 2:
+            cell.textLabel?.text = "douyin"
         default:
             break
         }
@@ -70,9 +73,11 @@ extension WeirdCameraViewController: UITableViewDataSource, UITableViewDelegate 
         let gcVC = GPUCameraViewController()
         switch indexPath.row {
         case 0:
-            gcVC.setupCamera(type: .redAndBlue)
+            gcVC.setupCamera(type: .thermal)
         case 1:
-            gcVC.setupCamera(type: .douYin)
+            gcVC.setupCamera(type: .oldPhoto)
+        case 2:
+            gcVC.setupCamera(type: .douyin)
         default:
             break
         }

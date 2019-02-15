@@ -33,10 +33,15 @@
 		3AB4F4AE21D094130039938B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F4AD21D094130039938B /* Utilities.swift */; };
 		3AB4F4B121D094540039938B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4F4B021D094540039938B /* UIViewController+Extension.swift */; };
 		3ABF1D602212C34C00BD63E9 /* GPUCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF1D5F2212C34C00BD63E9 /* GPUCameraViewController.swift */; };
-		3ABF1D632212C60C00BD63E9 /* douyinf.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF1D612212C60C00BD63E9 /* douyinf.fsh */; };
-		3ABF1D642212C60C00BD63E9 /* r&b.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF1D622212C60C00BD63E9 /* r&b.fsh */; };
-		3ABF1D662212D0B100BD63E9 /* douyinv.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF1D652212D0B100BD63E9 /* douyinv.vsh */; };
+		3ABF1D642212C60C00BD63E9 /* thermal.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF1D622212C60C00BD63E9 /* thermal.fsh */; };
 		3ABF1D6C2213D29100BD63E9 /* GPUImage3DFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF1D6B2213D29100BD63E9 /* GPUImage3DFilter.m */; };
+		3ABF1D7822157E1900BD63E9 /* DouYinImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF1D7722157E1900BD63E9 /* DouYinImageViewController.swift */; };
+		3ABF1D7A22157F1C00BD63E9 /* oldPhoto.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF1D7922157F1C00BD63E9 /* oldPhoto.fsh */; };
+		3ABF1D7C221667DE00BD63E9 /* straight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF1D7B221667DE00BD63E9 /* straight.fsh */; };
+		3ABF1D7F2216BE8E00BD63E9 /* EatCrabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF1D7E2216BE8E00BD63E9 /* EatCrabViewController.swift */; };
+		3ABF1D812216C12100BD63E9 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF1D802216C12100BD63E9 /* RxSwiftViewController.swift */; };
+		3ABF1D9F2216D64400BD63E9 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF1D9E2216D64400BD63E9 /* RxSwift.framework */; };
+		3ABF1DA12216D64C00BD63E9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF1DA02216D64C00BD63E9 /* RxCocoa.framework */; };
 		653ABD225A080330E8A1975C /* Pods_SecretAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +61,19 @@
 			remoteInfo = SecretAlbum;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3ABF1D972216C6F900BD63E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,12 +111,17 @@
 		3AB4F4AD21D094130039938B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3AB4F4B021D094540039938B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3ABF1D5F2212C34C00BD63E9 /* GPUCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUCameraViewController.swift; sourceTree = "<group>"; };
-		3ABF1D612212C60C00BD63E9 /* douyinf.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = douyinf.fsh; sourceTree = "<group>"; };
-		3ABF1D622212C60C00BD63E9 /* r&b.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "r&b.fsh"; sourceTree = "<group>"; };
-		3ABF1D652212D0B100BD63E9 /* douyinv.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = douyinv.vsh; sourceTree = "<group>"; };
+		3ABF1D622212C60C00BD63E9 /* thermal.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = thermal.fsh; sourceTree = "<group>"; };
 		3ABF1D6A2213D29100BD63E9 /* GPUImage3DFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImage3DFilter.h; sourceTree = "<group>"; };
 		3ABF1D6B2213D29100BD63E9 /* GPUImage3DFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImage3DFilter.m; sourceTree = "<group>"; };
 		3ABF1D6E2213D3F000BD63E9 /* SecretAlbum-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SecretAlbum-Bridging-Header.h"; sourceTree = "<group>"; };
+		3ABF1D7722157E1900BD63E9 /* DouYinImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYinImageViewController.swift; sourceTree = "<group>"; };
+		3ABF1D7922157F1C00BD63E9 /* oldPhoto.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = oldPhoto.fsh; sourceTree = "<group>"; };
+		3ABF1D7B221667DE00BD63E9 /* straight.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = straight.fsh; sourceTree = "<group>"; };
+		3ABF1D7E2216BE8E00BD63E9 /* EatCrabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatCrabViewController.swift; sourceTree = "<group>"; };
+		3ABF1D802216C12100BD63E9 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		3ABF1D9E2216D64400BD63E9 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABF1DA02216D64C00BD63E9 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27961371973CE7DFD274092 /* Pods-SecretAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +130,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABF1DA12216D64C00BD63E9 /* RxCocoa.framework in Frameworks */,
+				3ABF1D9F2216D64400BD63E9 /* RxSwift.framework in Frameworks */,
 				653ABD225A080330E8A1975C /* Pods_SecretAlbum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +177,7 @@
 			children = (
 				3A0D07F622129E62007C2480 /* WeirdCamera */,
 				3A0D07F722129E68007C2480 /* SecretAlbum */,
+				3ABF1D7D2216BE5200BD63E9 /* EatCrab */,
 				3A1ACFBA21EC6BD3006FE1E0 /* Widget */,
 			);
 			path = View;
@@ -277,14 +303,24 @@
 			isa = PBXGroup;
 			children = (
 				3ABF1D5F2212C34C00BD63E9 /* GPUCameraViewController.swift */,
-				3ABF1D612212C60C00BD63E9 /* douyinf.fsh */,
-				3ABF1D652212D0B100BD63E9 /* douyinv.vsh */,
-				3ABF1D622212C60C00BD63E9 /* r&b.fsh */,
+				3ABF1D7722157E1900BD63E9 /* DouYinImageViewController.swift */,
+				3ABF1D622212C60C00BD63E9 /* thermal.fsh */,
+				3ABF1D7922157F1C00BD63E9 /* oldPhoto.fsh */,
+				3ABF1D7B221667DE00BD63E9 /* straight.fsh */,
 				3ABF1D6E2213D3F000BD63E9 /* SecretAlbum-Bridging-Header.h */,
 				3ABF1D6A2213D29100BD63E9 /* GPUImage3DFilter.h */,
 				3ABF1D6B2213D29100BD63E9 /* GPUImage3DFilter.m */,
 			);
 			path = GPUCamera;
+			sourceTree = "<group>";
+		};
+		3ABF1D7D2216BE5200BD63E9 /* EatCrab */ = {
+			isa = PBXGroup;
+			children = (
+				3ABF1D7E2216BE8E00BD63E9 /* EatCrabViewController.swift */,
+				3ABF1D802216C12100BD63E9 /* RxSwiftViewController.swift */,
+			);
+			path = EatCrab;
 			sourceTree = "<group>";
 		};
 		886DB3B1E96E3CD1152C3A37 /* Pods */ = {
@@ -299,6 +335,8 @@
 		AC5004D5E0275EB4A26F9824 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3ABF1DA02216D64C00BD63E9 /* RxCocoa.framework */,
+				3ABF1D9E2216D64400BD63E9 /* RxSwift.framework */,
 				0BF6F88E673F01200C139DF8 /* Pods_SecretAlbum.framework */,
 			);
 			name = Frameworks;
@@ -316,6 +354,7 @@
 				3AB4F47121D085150039938B /* Frameworks */,
 				3AB4F47221D085150039938B /* Resources */,
 				13429F3320EF6311A9140EFA /* [CP] Embed Pods Frameworks */,
+				3ABF1D972216C6F900BD63E9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,12 +450,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ABF1D642212C60C00BD63E9 /* r&b.fsh in Resources */,
+				3ABF1D642212C60C00BD63E9 /* thermal.fsh in Resources */,
+				3ABF1D7C221667DE00BD63E9 /* straight.fsh in Resources */,
 				3AB4F48221D085170039938B /* LaunchScreen.storyboard in Resources */,
-				3ABF1D632212C60C00BD63E9 /* douyinf.fsh in Resources */,
-				3ABF1D662212D0B100BD63E9 /* douyinv.vsh in Resources */,
 				3AB4F47F21D085170039938B /* Assets.xcassets in Resources */,
 				3AB4F47D21D085150039938B /* Main.storyboard in Resources */,
+				3ABF1D7A22157F1C00BD63E9 /* oldPhoto.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +487,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -456,6 +498,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +544,8 @@
 				3A18520321F06A1200BC5014 /* UserInterfaceConstants.swift in Sources */,
 				3A0D07F92212BB69007C2480 /* WeirdCameraViewController.swift in Sources */,
 				3A1ABF2F21F5AB40001FF636 /* FileUtility.swift in Sources */,
+				3ABF1D812216C12100BD63E9 /* RxSwiftViewController.swift in Sources */,
+				3ABF1D7F2216BE8E00BD63E9 /* EatCrabViewController.swift in Sources */,
 				3A18520521F06C3C00BC5014 /* UIView+Extension.swift in Sources */,
 				3A1ACFC621ECB6FC006FE1E0 /* Date+Extension.swift in Sources */,
 				3A1ACFC221EC6BD3006FE1E0 /* PhotoDisplayCell.swift in Sources */,
@@ -513,6 +560,7 @@
 				3A0D07FB2212BB77007C2480 /* SecretAlbumViewController.swift in Sources */,
 				3A1ACFB621EC46CB006FE1E0 /* Notification+Extension.swift in Sources */,
 				3A1ACFC321EC6BD3006FE1E0 /* CustomAlbumViewController.swift in Sources */,
+				3ABF1D7822157E1900BD63E9 /* DouYinImageViewController.swift in Sources */,
 				3A1ABF2D21F5AB32001FF636 /* PhotoUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

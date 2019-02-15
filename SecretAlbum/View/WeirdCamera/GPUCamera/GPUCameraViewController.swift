@@ -12,29 +12,37 @@ import GPUImage
 class GPUCameraViewController: UIViewController {
     
     enum FilterType {
-        case redAndBlue
-        case douYin
+        case thermal
+        case oldPhoto
+        case douyin
     }
+    
+    private var filterType: FilterType!
     
     private var previewImageView: GPUImageView!
     private var camera: GPUImageStillCamera!
     private var filter: GPUImageFilter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     func setupCamera(type: FilterType) {
+        filterType = type
+        
         camera = GPUImageStillCamera.init(sessionPreset: AVCaptureSession.Preset.hd1280x720.rawValue, cameraPosition: AVCaptureDevice.Position.front)
         camera.outputImageOrientation = .portrait
         camera.frameRate = 30
         camera.horizontallyMirrorFrontFacingCamera = true
         
         switch type {
-        case .redAndBlue:
-            filter = GPUImageFilter.init(fragmentShaderFromFile: "r&b")
-        case .douYin:
-            filter = GPUImage3DFilter()
+        case .thermal:
+            filter = GPUImageFilter.init(fragmentShaderFromFile: "thermal")
+        case .oldPhoto:
+            filter = GPUImageFilter.init(fragmentShaderFromFile: "oldPhoto")
+//            filter = GPUImage3DFilter()
+        case .douyin:
+            filter = GPUImageFilter.init(fragmentShaderFromFile: "straight")
         }
         
         previewImageView = GPUImageView(frame: view.bounds)
@@ -73,6 +81,11 @@ class GPUCameraViewController: UIViewController {
         camera.capturePhotoAsImageProcessedUp(toFilter: filter) { (image, error) in
             if let validImage = image {
                 UIImageWriteToSavedPhotosAlbum(validImage, nil, nil, nil)
+                if self.filterType == .douyin {
+                    let douyinVC = DouYinImageViewController()
+                    douyinVC.setupImage(image: validImage)
+                    self.navigationController?.pushViewController(douyinVC, animated: true)
+                }
             }
         }
     }

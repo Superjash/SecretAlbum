@@ -15,11 +15,12 @@ NSString *const kGPUImage3DFragmentShaderString = SHADER_STRING
  // 图片
  uniform sampler2D inputImageTexture;
  
+ uniform highp vec2 imagePixel;
+ 
+ uniform highp vec2 offset;
+ 
  void main()
  {
-     // 这张图片转成0~1，每个像素的值是多少
-     lowp vec2 imagePixel = 1.0 / vec2(640.0,1136.0);
-     
      // 对纹理坐标进行偏移，*5.0代表着偏移五个像素
      lowp vec4 right = texture2D(inputImageTexture, textureCoordinate + imagePixel * 5.0);
      lowp vec4 left = texture2D(inputImageTexture, textureCoordinate - imagePixel * 5.0);
@@ -30,13 +31,26 @@ NSString *const kGPUImage3DFragmentShaderString = SHADER_STRING
 
 @implementation GPUImage3DFilter
     
-    - (instancetype)init
-    {
-        self = [super initWithFragmentShaderFromString:kGPUImage3DFragmentShaderString];
-        if (self) {
-            
-        }
-        return self;
+- (instancetype)init
+{
+    self = [super initWithFragmentShaderFromString:kGPUImage3DFragmentShaderString];
+    if (self) {
+        
     }
+    return self;
+}
+    
+- (void)setupFilterForSize:(CGSize)filterFrameSize
+{
+    runSynchronouslyOnVideoProcessingQueue(^{
+        [GPUImageContext setActiveShaderProgram:self->filterProgram];
+        CGSize imagePixel;
+        imagePixel.width = 1.0 / filterFrameSize.width;
+        imagePixel.height = 1.0 / filterFrameSize.height;
+        [self setSize:imagePixel forUniformName:@"imagePixel"];
+        [self setPoint:self.offset forUniformName:@"offset"];
+//        NSLog(@"%f, %f", self.offset.x, self.offset.y);
+    });
+}
 
 @end
